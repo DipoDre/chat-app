@@ -1,0 +1,21 @@
+<% include partials/menu %>
+
+<div class="ui container">
+    <h1 class="ui centered header">Profile's Avatar</h1>
+    <hr>
+    <div class="section">
+
+      <p class="ui grid centered"><i class="massive image icon"></i></p>
+        <div class="ui grid">
+            <form action="/user/avatar/" method="post" enctype="multipart/form-data" class="ui centered form">
+              <div class="field">
+                <label>Select Avatar</label>
+                <input type='file' name='image' />
+              </div>
+                <button class="ui right floated  orange button" type="submit">Update Avatar</button>
+            </form>
+        </div>
+
+    </div>
+</div>
+

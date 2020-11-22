@@ -1,0 +1,21 @@
+<form method="post" action="/auth/authenticate" class="ui form">
+  <div class="required field">
+    <label>Username</label>
+    <input type="text" name="username" placeholder="Enter Username" value="<%= typeof username != 'undefined' ? username : '' %>">
+  </div>
+  <div class="required field">
+    <label>Password</label>
+    <input type="password" name="password" placeholder="Enter Password" value="<%= typeof password != 'undefined' ? password : '' %>">
+  </div>
+  <button class="ui blue button" type="submit" name="action" value="login">Login</button>
+  <p>No Account? <a class="ui teal" href="/auth/register"> Sign Up &amp; Login </a></p>
+</form>
+
+<% if(typeof error != 'undefined') { %>
+  <div class="ui error message">
+  <div class="header">
+    <%= error.title %></div>
+    <p><%= error.message %></p>
+  </div>
+<% } %>
+

@@ -1,0 +1,33 @@
+<form method="post" action="/user" class="ui form">
+  <div class="required field">
+    <label>Full Names</label>
+    <input type="text" name="name" placeholder="Enter Full Names" value="<%= typeof name != 'undefined' ? name : '' %>">
+  </div>
+  <div class="required field">
+    <label>Username</label>
+    <input type="text" name="username" placeholder="Enter Username" value="<%= typeof username != 'undefined' ? username : '' %>">
+  </div>
+  <div class="required field">
+    <label>Email</label>
+    <input type="email" name="email" placeholder="Enter Email" value="<%= typeof email != 'undefined' ? email : '' %>">
+  </div>
+  <div class="required field">
+    <label>Password</label>
+    <input type="password" name="password" placeholder="Create Password" value="<%= typeof password != 'undefined' ? password : '' %>">
+  </div>
+  <div class="required field">
+    <label>Confirm Password</label>
+    <input type="password" name="password2" placeholder="Confirm Password" value="<%= typeof password2 != 'undefined' ? password2 : '' %>">
+  </div>
+  <button class="ui teal button" type="submit" name="action" value="signup">Sign Up &amp; Login</button>
+  <p>Have an account? <a class="ui teal" href="/"> Login </a></p>
+</form>
+
+<% if(typeof error != 'undefined') { %>
+  <div class="ui error message">
+  <div class="header">
+    <%= error.title %></div>
+    <p><%= error.message %></p>
+  </div>
+<% } %>
+
